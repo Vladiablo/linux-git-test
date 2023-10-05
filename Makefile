@@ -6,13 +6,11 @@ CC = gcc
 CFLAGS =
 LIBS = -lm
 
-debug:
-	CFLAGS += -g
-	calculator
+debug: CFLAGS += -g
+debug: calculator
 
-release:
-	CFLAGS += -O2
-	calculator
+release: CFLAGS += -O2
+release: calculator
 
 calculator: calculate.o main.o
 	gcc calculate.o main.o -o bin/calculator $(LIBS)
