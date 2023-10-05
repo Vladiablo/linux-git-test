@@ -3,8 +3,16 @@
 #
 
 CC = gcc
-CFLAGS = -g
+CFLAGS =
 LIBS = -lm
+
+debug:
+	CFLAGS += -g
+	calculator
+
+release:
+	CFLAGS += -O2
+	calculator
 
 calculator: calculate.o main.o
 	gcc calculate.o main.o -o bin/calculator $(LIBS)
