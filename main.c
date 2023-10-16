@@ -14,4 +14,6 @@ int main(void)
 
 	Result = Calculate(Numeral, Operation);
 	printf("%6.2f\n", Result);
+
+	return 0;
 }
